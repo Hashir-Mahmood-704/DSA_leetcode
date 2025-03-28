@@ -12,11 +12,9 @@ def find_once_occurred_element(array):
         i = i + 1
     print(occurrences)
 
-    i = 0
-    while i < len(array):
-        if occurrences[array[i]] == 1:
-            return array[i]
-        i = i + 1
+    for key, value in occurrences.items():
+        if value == 1:
+            return key
 
     return -1
 

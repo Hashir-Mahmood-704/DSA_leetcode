@@ -1,5 +1,6 @@
 # Q18: Intersection of two sorted arrays
 
+
 def intersection(array1, array2):
     i = 0
     j = 0
