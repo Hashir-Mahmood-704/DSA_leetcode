@@ -3,7 +3,7 @@
 
 def second_highest(array):
     highest_element = array[0]
-    second_highest_val = -1  # or use float('-inf') if negative numbers are expected
+    second_highest_val = -1
     i = 0
     while i < len(array):
         if array[i] > highest_element:
@@ -13,7 +13,7 @@ def second_highest(array):
             second_highest_val = array[i]
         i = i + 1
     return second_highest_val
-
+ 
 
 result = second_highest([17, 4, 12, 98, 55])
 print(result)

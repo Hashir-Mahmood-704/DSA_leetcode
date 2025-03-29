@@ -1,4 +1,4 @@
-# Q22: Sort 0, 1, 2 in array in ascending order
+# Q21: Sort 0, 1, 2 in array in ascending order
 
 
 def swap_elements(array, index1, index2):
@@ -14,19 +14,16 @@ def sortZeroOneTwo(array):
     m = 0
     h = len(array) - 1
     while m <= h:
-        if l < len(array) and array[l] == 0:
-            l = l + 1
-        elif array[m] == 1 or (array[m] == 0 and m < l):
-            m = m + 1
-        elif array[h] == 2:
-            h = h - 1
-        elif array[l] != 0 and array[m] == 0:
+        if array[m] == 0:
             swap_elements(array, l, m)
             l = l + 1
-        elif array[m] == 2:
+            m = m + 1
+        elif array[m] == 1:
+            m = m + 1
+        else:
             swap_elements(array, m, h)
             h = h - 1
     print(array)
 
 
-sortZeroOneTwo([2, 0, 1])
+sortZeroOneTwo([2, 0, 1, 2, 1, 1, 0, 2])

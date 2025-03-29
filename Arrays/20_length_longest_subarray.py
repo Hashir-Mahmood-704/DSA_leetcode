@@ -1,4 +1,4 @@
-# Q21: Find length of highest length subarray having the target sum.
+# Q20: Find length of highest length subarray having the target sum.
 
 
 def findHighestLength(array, targetSum):
@@ -25,4 +25,5 @@ def findHighestLength(array, targetSum):
     print(highestLength)
 
 
-findHighestLength([1, 1, 3, 4, 1, 6, 5, 2], 8)
+# findHighestLength([1, 1, 3, 4, 1, 6, 5, 2], 8)
+findHighestLength([1, 1, 1, 1, 1, 2, 2, 2, 4, 3], 5)

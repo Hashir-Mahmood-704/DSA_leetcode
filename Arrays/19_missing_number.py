@@ -8,6 +8,7 @@ def findMissingNumber(array):
     while i <= n:
         occurrences[i] = 0
         i = i + 1
+        
     i = 0
     while i < len(array):
         occurrences[array[i]] = occurrences[array[i]] + 1

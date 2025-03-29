@@ -10,7 +10,6 @@ def find_once_occurred_element(array):
         else:
             occurrences[array[i]] = 1
         i = i + 1
-    print(occurrences)
 
     for key, value in occurrences.items():
         if value == 1:
