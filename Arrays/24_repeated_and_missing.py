@@ -1,26 +1,25 @@
-# Q19: Find the only missing number in array of range [0, n].
+# Q24: Find repeated and missing elements in array of range [1, n]
 
 
-def findMissingNumber(array):
+def findRepeatedAndMissingNumber(array):
     n = len(array)
     occurrences = {}
-    i = 0
+    i = 1
     while i <= n:
         occurrences[i] = 0
         i = i + 1
-
     i = 0
     while i < len(array):
         occurrences[array[i]] = occurrences[array[i]] + 1
         i = i + 1
-
+    ansArray = [None, None]
     for key, value in occurrences.items():
+        if value == 2:
+            ansArray[0] = key
         if value == 0:
-            return key
-    return n
+            ansArray[1] = key
+    return ansArray
 
 
-result = findMissingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1])
+result = findRepeatedAndMissingNumber([3, 2, 2])
 print(result)
-
-
